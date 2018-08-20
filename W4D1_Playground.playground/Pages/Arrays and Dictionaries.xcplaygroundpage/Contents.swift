@@ -19,19 +19,21 @@ myDictionary["Principal"] = 1
  - Experiment:
  Try creating an array and dictionary using `'let'` vs `'var'` then try adding something to them. What do you notice? For the array, you can use a method called 'append' to add something to it.
  */
+var myArray = ["this", "that", "the other thing"]
+myArray.append("plus some more stuff")
 
 
 /*:
  - Experiment:
  Try creating an empty array with an explicit type `[type]`. What happens when you add a value that isn't the same type?
  */
-
+var anotherArray = [String]()
 
 /*:
  - Experiment:
  Try creating an empty dictionary with an explicit type. `[keyType: valueType]`
  */
-
+var aDictionary = [String: Int]()
 
 /*:
  - Experiment:
@@ -43,7 +45,12 @@ myDictionary["Principal"] = 1
  - reverse
  - count
  */
-
+var carArray = ["Ford", "Chevy", "Jaguar", "Toyota"]
+carArray.append("Fiat")
+carArray.insert("Honda", at: 0)
+carArray.remove(at: 4)
+carArray.count
+carArray.removeAll()
 
 /*:
  - Experiment:
@@ -52,16 +59,24 @@ myDictionary["Principal"] = 1
  - isEmpty
  - count
  */
-
-
+var carDictionary = ["Toyota" : "Tacoma", "Ford" : "Focus", "Nissan" : "Xterra"]
+carDictionary["Toyota"]
+carDictionary.removeValue(forKey: "Ford")
+carDictionary.isEmpty
+carDictionary.count
 /*:
  - Callout(Challenge):
     Declare a mutable array that is empty and holds `Strings`. On the next few lines, add the following names to the array: John, Karen, Jane
  
     Finally, print out each person's name from the array using their index and string interpolation
 */
-
-
+var nameArray = [String]()
+nameArray.append("John")
+nameArray.append("Karen")
+nameArray.append("Jane")
+print("\(nameArray[0])")
+print("\(nameArray[1])")
+print("\(nameArray[2])")
 /*:
  - Callout(Challenge):
   Declare a mutable dictionary with the following names and their salaries
@@ -74,6 +89,7 @@ myDictionary["Principal"] = 1
  
     On the next line, add this last person's info: Bob - $45000
  */
-
+var employeeSalary = ["John" : 50000, "Jane" : 70000, "Karen" : 62000]
+employeeSalary ["Bob"] = 45000
 
 //: [Next](@next)
