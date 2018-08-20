@@ -1,10 +1,3 @@
-/*:
- Swift playgrounds allow you to run Swift code directly without having to code an entire app.
- 
- - Experiment: Let's try this out now, write the following line of code directly below this comment
- 
-    `print("Hello, world!")`
- */
 
 /*:
  ## Variables
@@ -22,7 +15,9 @@ students = 7
  What happens if you try to change the value of a constant?
  */
 
-
+let firstName = "Jamie"
+let lastName = "Feeny"
+let fullName = firstName + " " + lastName
 //: ---
 /*:
  ## Types
@@ -42,7 +37,7 @@ students = 7
   What happens if you try to change the value to a `Double` like 4.1?
  */
 
-var weeksCompleted = 4
+var weeksCompleted = 5
 
 /*:
  As you can see, you don't have to write the type explicitly. Providing a value when you create a constant or variable lets the compiler _infer_ its type. In the example above, the compiler infers that `students` is an integer because its initial value is an integer.
@@ -72,11 +67,11 @@ let explicitDouble: Double = 70
  */
 
 var tipAmount = 6.01
-// tipAmount's type is:
+// tipAmount's type is: Double
 
 
 var isOpen = true
-// isOpen's type is:
+// isOpen's type is: Bool
 
 /*:
 Values are never implicitly converted to another type. If you need to convert a value to a different type, explicitly make an instance of the desired type.
@@ -91,11 +86,10 @@ let widthLabel = label + String(width)
  Try removing the conversion to `String` from the last line. What error do you get?
  */
 // binary operator cannot be applied to two different types
-/*:
- - Callout(Challenge):
- Let's solve some simple geometric math problems. For each question, make sure you show your work just like how your teachers told you in high school. Show all the variables you are using and give them meaningful names. Hint: You can declare your own 'pi' using 3.14
- */
-
+var pi = 3.14
+var radius: Double = 10
+let area = pi * 2
+print (area)
 /*:
  - Callout(Formulas):
  Area of circle = pi * radius^2
