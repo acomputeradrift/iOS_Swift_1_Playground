@@ -86,9 +86,9 @@ let widthLabel = label + String(width)
  Try removing the conversion to `String` from the last line. What error do you get?
  */
 // binary operator cannot be applied to two different types
-var pi = 3.14
+let pi = 3.14
 var radius: Double = 10
-let area = pi * 2
+let area = pi * (radius * radius)
 print (area)
 /*:
  - Callout(Formulas):
@@ -108,7 +108,7 @@ Volume of cylinder = pi * radius^2 * height
 /*:
  Hint: Make sure your radius is of type `Double`
  */
-
+let circumference = 2 * pi * radius
 /*:
  - Callout(Problem 2):
  Find the circumference of a circle with a diameter of 24 metres.
@@ -116,7 +116,8 @@ Volume of cylinder = pi * radius^2 * height
 /*:
  Hint: Radius is half the length of the diameter
  */
-
+let diameter: Double = 24
+var circleRadius:Double = 0.5 * diameter
 /*:
  - Callout(Problem 3):
  Find the volume of a cylinder with a radius of 5 metres and a height of 7 metres
@@ -124,6 +125,6 @@ Volume of cylinder = pi * radius^2 * height
 /*:
  Hint: You can double-check your answers yourself or on Google... Google has a really easy input mechanism for all three of these formulas if you just search them up.
  */
-
+let volCylinder = 5*7
 
 //: [Next](@next)
