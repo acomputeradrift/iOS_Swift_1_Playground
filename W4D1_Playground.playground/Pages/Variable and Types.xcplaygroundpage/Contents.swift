@@ -117,7 +117,7 @@ let circumference = 2 * pi * radius
  Hint: Radius is half the length of the diameter
  */
 let diameter: Double = 24
-var circleRadius:Double = 0.5 * diameter
+radius = 0.5 * diameter
 /*:
  - Callout(Problem 3):
  Find the volume of a cylinder with a radius of 5 metres and a height of 7 metres
@@ -125,6 +125,8 @@ var circleRadius:Double = 0.5 * diameter
 /*:
  Hint: You can double-check your answers yourself or on Google... Google has a really easy input mechanism for all three of these formulas if you just search them up.
  */
-let volCylinder = 5*7
+var height:Double = 7
+radius = 5
+let volCylinder = pi * (radius * radius) * height
 
 //: [Next](@next)
