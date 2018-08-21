@@ -105,8 +105,7 @@ print ("The total is \(total).")
  */
 
 let numberArray = [1, 4, 5, 5, 5, 3, 2, 1, 4, 2, 2, 2, 1]
-for i in 0...numberArray.count{
-    let firstNum = numberArray[i]
-    if
-}
+//for i in 0...numberArray.count{
+//    let firstNum = numberArray[i]
+//}
 //: [Next](@next)

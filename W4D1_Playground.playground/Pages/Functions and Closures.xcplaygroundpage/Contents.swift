@@ -23,9 +23,9 @@ func sayHello(){
  - **Open and close parentheses with a parameter called 'toPerson' of type `String`**
  - Open and close braces
  */
-func sayHello(toPerson: String){
-    print("Hello \(toPerson)")
-}
+//func sayHello(toPerson: String){
+//    print("Hello \(toPerson)")
+//}
 /*:
  - Callout(Structure): This function takes in a single parameter and returns a value of type `String`
  
@@ -42,22 +42,66 @@ func sayHello(toPerson: String) -> String{
  - Experiment:
  Try calling all of the functions above. They all have the same function name, but the compiler doesn't complain. Can you think of why this might be?
  */
+sayHello()
+//sayHello(toPerson: "Jamie")
+sayHello(toPerson: "Jamie")
+
 
 /*:
  - Experiment:
  Try creating your own function that accepts two parameters of any type you choose. Have the function print out the two parameters and test your function.
  */
+func newFunction(forTesting: String, andScreaming: String){
+    print("These are the words passed in: \(forTesting) and \(andScreaming)")
+}
 
+newFunction(forTesting: "fuck", andScreaming: "shit")
 /*:
  - Callout(Challenge):
  Create four separate functions to add, subtract, multiple, and divide with two parameters given to it and returns a number result. Try testing each one afterwards.
  
  */
+func addition(firstNumber: Double, secondNumber: Double){
+    print("The answer is \(firstNumber + secondNumber)")
+}
+addition(firstNumber: 5, secondNumber: 6)
+
+func subtraction(firstNumber: Double, secondNumber: Double){
+    print("The answer is \(firstNumber - secondNumber)")
+}
+subtraction(firstNumber: 15, secondNumber: 3)
+
+func multiplication(firstNumber: Double, secondNumber: Double){
+    print("The answer is \(firstNumber * secondNumber)")
+}
+multiplication(firstNumber: 5, secondNumber: 6)
+
+func division(firstNumber: Double, secondNumber: Double){
+    print("The answer is \(firstNumber / secondNumber)")
+}
+division(firstNumber: 5, secondNumber: 6)
+
+
+
+
 
 /*:
  - Callout(Challenge):
  Create your own 'reverse' function that takes in an array of Int, reverses the order of the array, and returns the newly reversed array of Int. The array class has its own 'reverse' method, but do not use it for this challenge.
  */
+func reverseItUp (myArray: [Int]) -> [Int]{
+    var tempArray = [Int]()
+    for i in 0..<myArray.count{
+    tempArray.append(myArray[myArray.count-1-i])
+       
+    }
+     return tempArray
+}
+var testArray = [4, 7, 2, 8, 1, 8, 6]
+reverseItUp(myArray: testArray)
+
+
+
 
 /*:
  ## Closures
@@ -117,17 +161,17 @@ var sayHelloClosureWithReturn = { (name: String) -> String in
  - Experiment:
  Try calling all of the closures above. What do you notice that is different from calling a function?
  */
-
-/*:
- - Experiment:
- Try creating your own closure that accepts two parameters of any type you choose. Have the closure print out the two parameters and test your closure.
- */
-
+sayHelloClosure
+sayHelloClosureToPerson("Jamie")
+sayHelloClosureWithReturn("Jamie")
 /*:
  - Experiment:
  Declare a variable with an explicit closure type: `(String) -> (String)`. This closure type says it takes one parameter of type String and returns a variable of type String.
  */
-
+let thisShitIsConfusing = { (inputName: String) -> String in
+    return  "\(inputName) is the word"
+}
+thisShitIsConfusing("bird")
 /*:
  - Callout(Challenge):
  Create a closure with at least two parameters of your choice and decide whether or not it returns anything. Then create a function that takes in your closure as a parameter and one additional parameter of your choice.
