@@ -21,7 +21,7 @@ for pet in pets {
  - Example: `2...5` or `2..<5`
  */
 
-for i in 2...5 {
+for i in 2..<5 {
     print("My Current Index: \(i)")
 }
 
@@ -35,13 +35,22 @@ for i in 2...5 {
  - Experiment:
   Use a ranged for loop to search through the 'pets' array above for the word 'pig' and print out its index.
  */
-
+for i in 0..<pets.count{
+    if pets[i] == "pig"{
+        print ("\(i)")
+    }
+    
+}
 
 /*:
  - Experiment:
  Create an array of random numbers of your choosing then make a for loop that adds 1 to each number.
  */
-
+var randomArray = [22, 24, 95, 43, 85, 70, 92]
+for i in 0..<randomArray.count{
+    randomArray[i] += 1
+     print ("\(randomArray[i])")
+}
 
 /*:
  - Experiment:
@@ -73,7 +82,14 @@ print(largest)
  Given a number `N`, from 0 to `N`, add up all the odd numbers and print out the result.
  ie: N = 5, 1+3+5 = 9
  */
-
+let n = 5
+var total = 0
+for i in 0...n{
+    if i % 2 != 0 {
+        total += i
+    }
+}
+print ("The total is \(total).")
 
 /*:
  - Callout(Challenge):
@@ -89,5 +105,8 @@ print(largest)
  */
 
 let numberArray = [1, 4, 5, 5, 5, 3, 2, 1, 4, 2, 2, 2, 1]
-
+for i in 0...numberArray.count{
+    let firstNum = numberArray[i]
+    if
+}
 //: [Next](@next)
