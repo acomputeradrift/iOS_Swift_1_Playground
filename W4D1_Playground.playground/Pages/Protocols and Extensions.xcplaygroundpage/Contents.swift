@@ -8,7 +8,13 @@
  */
 protocol ShapeProtocol {
     var numberOfSides: Int { get set }
+    var length: Int { get set }
+    var width: Int { get set }
+    var height: Int { get set }
+    var color: String { get set }
+    
     func shapeDescription()
+    func areaOfShape()
 }
 
 /*:
@@ -16,14 +22,25 @@ protocol ShapeProtocol {
  */
 class Square: ShapeProtocol {
     var numberOfSides: Int
+    var length: Int
+    var width: Int
+    var height: Int
+    var color: String
     
     init(){
         self.numberOfSides = 4
+        self.length = 3
+        self.width = 5
+        self.height = 2
+        self.color = "Red"
     }
     
     func shapeDescription() {
         
         print("This is a square")
+    }
+    func areaOfShape() {
+        print("The area is \(self.length * self.width * self.height)")
     }
 }
 
@@ -31,6 +48,9 @@ class Square: ShapeProtocol {
  - Experiment:
  Add a new function in our 'ShapeProtocol' that should calculate the area of its shape. Make sure you implement it in our 'Square' class as well.
  */
+let square = Square()
+square.areaOfShape()
+
 
 /*:
  - Experiment:
@@ -74,7 +94,13 @@ var mySquaredDoubleValue = myDoubleValue.square()
  - Experiment:
  Try adding the 'square' function to the `Float` type
  */
-
+extension Float {
+    func square() -> Float {
+        return self * self
+    }
+}
+var myFloatValue = 234.3
+var mySquaredFloatValue = myFloatValue.square()
 /*:
  We are going to add a few extensions to several classes that you could potentially use for your future projects to make things more convenient.
  */
